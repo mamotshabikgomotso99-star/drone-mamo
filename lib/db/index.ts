@@ -5,10 +5,6 @@ import * as schema from "./schema";
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-  // In dev with no DB, throw a clear error rather than silent crash
-  if (process.env.NODE_ENV === "production") {
-    throw new Error("DATABASE_URL is required in production");
-  }
   console.warn("[db] DATABASE_URL not set — database calls will fail");
 }
 
