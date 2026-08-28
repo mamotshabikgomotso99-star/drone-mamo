@@ -10,7 +10,6 @@ if (!connectionString) {
 
 // Reuse connection across hot reloads in dev
 declare global {
-  // eslint-disable-next-line no-var
   var __pgClient: ReturnType<typeof postgres> | undefined;
 }
 
